@@ -7,8 +7,12 @@
   <section class="results">
   </section>
 
-  <section class="listing" *ngFor="let hero of housingLocation" style="width: 150px;">
-    <img class="listing-photo" [src]="hero.photo" alt="Exterior photo of {{hero.name}}">
-    <h2 class="listing-heading">{{ hero.name }}</h2>
-    <p class="listing-location">{{ hero.city}}, {{hero.state }}</p>
-  </section>
+  <ul class="heroes" style="width: 150px;">
+    <li>
+      <div *ngFor="let hero of housingLocation">       
+        <img class="listing-photo" [src]="hero.photo" alt="Exterior photo of {{hero.name}}">
+        <h2 class="listing-heading">{{ hero.name }}</h2>
+        <p class="listing-location">{{ hero.city}}, {{hero.state }}</p>
+      </div>
+    </li>
+  </ul>
