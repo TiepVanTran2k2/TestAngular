@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { employee } from '../model/employee.model';
+import { Employee, employee } from '../model/employee.model';
 import { EmployeesService } from '../service/employees.service';
 
 @Component({
@@ -8,21 +8,19 @@ import { EmployeesService } from '../service/employees.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent{
-  employees: employee[] = [];
+  employees: Employee[] = [];
   constructor(private employeesService: EmployeesService){}
     ngOnInit(): void {
-
-        this.employeesService.getAllEmployee()
+      this.employeesService.getAllEmployee()
            .subscribe({
             next: (employees) => {
               this.employees = employees;
+              
               console.log(this.employees);
             },
             error: (response) => {
               console.log(response);
             }
            })
-           
-
     }
 }

@@ -16,7 +16,7 @@
                 <tr *ngFor="let employee of employees">
                     <td><span class="ms-1">{{employee.FullName}}</span></td>
                     <td><span class="ms-1">{{employee.ShortName}}</span></td>
-                    <td><a href="" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i>Update</a></td>
+                    <td><app-employee-update [employee]="employee"></app-employee-update></td>
                 </tr>
             </tbody>
         </table>
