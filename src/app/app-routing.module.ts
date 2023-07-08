@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
+import { TaskListComponent } from './task/task-list/task-list.component';
 const routes: Routes = [
   {
     path: 'employee',
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: 'employee/edit/:id',
     component: EmployeeUpdateComponent
+  },
+  {
+    path: 'task',
+    component: TaskListComponent
   }
 ];
 

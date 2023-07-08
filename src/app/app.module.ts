@@ -11,10 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EmployeeAddComponent } from './employee-add/employee-add.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
+import { TaskListComponent } from './task/task-list/task-list.component';
 @NgModule({
   
   declarations: [
-    AppComponent, EmployeeListComponent, EmployeeAddComponent, EmployeeUpdateComponent
+    AppComponent, EmployeeListComponent, EmployeeAddComponent, EmployeeUpdateComponent, TaskListComponent
   ],
   imports: [
     BrowserModule,
