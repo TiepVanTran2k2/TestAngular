@@ -20,4 +20,7 @@ export class EmployeesService {
   updateEmployee(requestModelAddEmployee: Employee): Observable<boolean>{
     return this.http.put<boolean>(this.baseUrl + "Staff", requestModelAddEmployee)
   }
+  getEmployee(id: number): Observable<Employee>{
+    return this.http.get<Employee>(this.baseUrl + "Staff/" + id);
+  }
 }
