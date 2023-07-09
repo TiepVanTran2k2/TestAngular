@@ -13,10 +13,12 @@ import { EmployeeUpdateComponent } from './employee-update/employee-update.compo
 import { TaskListComponent } from './task/task-list/task-list.component';
 import { HomeComponent } from './home/home.component';
 import { TaskAddComponent } from './task/task-add/task-add.component';
+import { GanttComponent } from './gantt/gantt.component';
+import { GanttModule } from '@syncfusion/ej2-angular-gantt';
 @NgModule({
   
   declarations: [
-    AppComponent, EmployeeListComponent, EmployeeAddComponent, EmployeeUpdateComponent, TaskListComponent, HomeComponent, TaskAddComponent
+    AppComponent, EmployeeListComponent, EmployeeAddComponent, EmployeeUpdateComponent, TaskListComponent, HomeComponent, TaskAddComponent, GanttComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { TaskAddComponent } from './task/task-add/task-add.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
+    GanttModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

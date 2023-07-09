@@ -10,7 +10,9 @@ export class TaskService {
   baseUrl: string = environment.baseApiUrl;
   constructor(private http: HttpClient) { }
   getAllTask(): Observable<task[]>{
-    return this.http.get<task[]>(this.baseUrl + "Task")
+    return this.http.get<task[]>(this.baseUrl + "Task");
   };
-  
+  addTask(requestModelAddTask: task): Observable<task>{
+    return this.http.post<task>(this.baseUrl + "Task", requestModelAddTask);
+  };
 }
